@@ -2,7 +2,7 @@
 Documentation    Suite description
 suite setup
 suite teardown
-resource
+resource   ../../keyword/Login
 
 *** Test Cases ***
 Test title
