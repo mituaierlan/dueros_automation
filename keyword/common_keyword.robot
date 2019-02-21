@@ -1,10 +1,13 @@
 *** Settings ***
-Documentation    Suite description
+Documentation    Container of common KeyWords used by all cases
+#Variables    ../config/testdata_stage.yaml
 
 *** Test Cases ***
-Test title
+TC1
+    Test    ${FP_CN_003.VehicleName}
 
 
 *** Keywords ***
-Provided precondition
-    Setup system under test
+Test
+    [Arguments]  ${appName}
+    log    ${appName}
