@@ -17,7 +17,10 @@ then
     mkdir ${report_path}
 fi
 
+adb kill-server
+adb start-server
+
 echo "Starting Appium on Linux..."
 appium &
 
-robot -V config/testdata_stage.yaml --outputdir ${report_path} keyword/common_keyword.robot
+robot -V config/testdata_stage.yaml --outputdir ${report_path} function_test/feature_x/Login.robot

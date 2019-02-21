@@ -1,10 +1,11 @@
 *** Settings ***
 Library    AppiumLibrary
 Library    atx
-Suite Setup    Launch_app
+Resource     ../../keyword/common_keyword.robot
+Suite Setup    Launch_mobile_app
 Suite Teardown    Close_app
 *** Variables ***
-${remote_url}    http://localhost:4723/wd/hub
+#${remote_url}    http://localhost:4723/wd/hub
 ${platformName}    Android
 ${deviceName1}    7dbbe9bb
 ${deviceName2}    05081198538fcade

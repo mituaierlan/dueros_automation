@@ -1,13 +1,12 @@
 *** Settings ***
 Documentation    Container of common KeyWords used by all cases
-#Variables    ../config/testdata_stage.yaml
-
-*** Test Cases ***
-TC1
-    Test    ${FP_CN_003.VehicleName}
+Variables    ../config/testdata_prod.yaml
 
 
 *** Keywords ***
-Test
-    [Arguments]  ${appName}
-    log    ${appName}
+Launch_mobile_app
+    log    open mobile app
+    log    ${Common.remote_url}
+    log    ${test}
+    ${app1}=    Open Application    ${Common.remote_url}   alias=FPAPP    platformName=${platformName}    deviceName=${deviceName1}    appPackage=${appPackage1}    appActivity=${appActivity1}    noReset=${noReset}    udid=${udid1}
+    log    openech xiaodu app

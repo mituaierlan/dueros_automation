@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation    Suite description
-suite setup
+Resource     ../../keyword/common_keyword.robot
+Suite Setup    Test1
 suite teardown
-resource   ../../keyword/Login
+
 
 *** Test Cases ***
 Test title
@@ -12,5 +13,5 @@ Test title
     Then check expectations
 
 *** Keywords ***
-Provided precondition
-    Setup system under test
+TEST1
+    Launch_mobile_app
