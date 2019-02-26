@@ -1,5 +1,5 @@
 *** Settings ***
-Variables   ../source/du_Page_source/LoginPage.yaml
+Variables   ../source/FP_Page_source/LoginPage.yaml
 *** Keywords ***
 Login via FP
     [Arguments]    ${username}    ${password}
@@ -22,9 +22,9 @@ Logout FP
 scan QR CODE
     log   scan qr code
     click element    xpath=//*[@text='扫一扫']
-    wait until page contains  '车辆已识别'    20s
+    wait until page contains    '车辆已识别'    20s
 enter Pin
-    Wait Until Page Contains Element     ${button_pin_one}   20s
+    Wait Until Page Contains Element     ${button_pin_one}    20s
     click element    ${button_pin_one}
     click element    ${button_pin_two}
     click element    ${button_pin_three}

@@ -7,6 +7,6 @@ Resource  ../../keyword/LoginPage.robot
 Variables  ../../config/testdata_stage.yaml
 *** Test Cases ***
 Login
-    [tags]    @tcid=1-1
-    run keyword and continue on failure  scan QR CODE
+    [Tags]    @tcid=1-1    @performance
+    run keyword and continue on failure   scan QR CODE
     go back
