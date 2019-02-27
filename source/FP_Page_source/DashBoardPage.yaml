@@ -1,9 +1,2 @@
-text_username: id=com.ford.oa.ap:id/login_username_text
-text_password: id=com.ford.oa.ap:id/login_password_text
-button_login: id=com.ford.oa.ap:id/login_button_login
-button_pin_one: id=com.ford.oa.ap:id/widget_pin_pad_button_one
-button_pin_two: id=com.ford.oa.ap:id/widget_pin_pad_button_two
-button_pin_three: id=com.ford.oa.ap:id/widget_pin_pad_button_three
-button_pin_four: id=com.ford.oa.ap:id/widget_pin_pad_button_four
-button_exit: xpath=//*[@text='退出']
-text_loading: xpath=//*[@text='加载中']
+scan_qr_code: xpath=//*[@text='扫一扫']
+text_recognized: '车辆已识别'
