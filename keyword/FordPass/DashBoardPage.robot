@@ -8,3 +8,4 @@ scan qr code
     wait until page contains   ${text_recognized}     20s
 
 
+

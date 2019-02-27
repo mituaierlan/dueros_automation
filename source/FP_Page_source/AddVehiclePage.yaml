@@ -1,0 +1,3 @@
+button_close: xpath=//*[@text='关闭']
+button_start: xpath=//*[@text='开始体验']
+
