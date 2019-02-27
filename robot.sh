@@ -23,4 +23,4 @@ adb start-server
 echo "Starting Appium on Linux..."
 appium &
 
-robot -V config/testdata_stage.yaml --outputdir ${report_path} function_test/feature_x/Login.robot
+robot -V config/common_data.yaml --outputdir ${report_path} function_test/feature_x/Login.robot

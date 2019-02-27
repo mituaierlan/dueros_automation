@@ -1,4 +1,4 @@
-Common: { remote_url: "http://localhost:4723/wd/hub" }
+
 
 FP_CN_003: {Env: STAGING, FCPassword: ford@1, FCUserName: '18652015607', PIN1: 1, PIN2: 2, PIN3: 1, PIN4: 2, VIN: LVSHFFAC6EF911826,
   VehicleName: "\u8F66\u8F862", name: FP_CN_003}

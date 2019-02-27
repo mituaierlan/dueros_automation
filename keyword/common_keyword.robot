@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Container of common KeyWords used by all cases
-Variables    ../config/testdata_prod.yaml
+Variables    ../config/common_data.yaml
 
 
 *** Keywords ***
