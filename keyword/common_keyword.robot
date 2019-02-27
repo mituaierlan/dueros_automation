@@ -1,3 +1,4 @@
+*** Settings ***
 Documentation    Suite description
 Variables    ../config/common.yaml
 Library    AppiumLibrary
