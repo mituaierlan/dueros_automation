@@ -1,0 +1,2 @@
+scan_qr_code: xpath=//*[@text='扫一扫']
+text_recognized: '车辆已识别'

@@ -1,0 +1,12 @@
+remote_url: http://localhost:4723/wd/hub
+platformName: Android
+deviceName1: 7dbbe9bb
+deviceName2: 05081198538fcade
+udid1: 7dbbe9bb
+udid2: 192.168.0.100:5555
+appPackage1: com.ford.oa.ap
+appPackage2: com.baidu.xiaoduos.launcher
+appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
+appActivity2: com.baidu.xiaoduos.launcher.ui.MainActivity
+automationName: uiautomator
+noReset: true
