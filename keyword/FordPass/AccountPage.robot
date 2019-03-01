@@ -10,3 +10,4 @@ Logout FP
     sleep    2s      #wait for finishing the swipe
     click element    ${text_exit}
     click element    ${text_exit}
+    wait until page does not contain    加载中    90s

@@ -1,5 +1,5 @@
 scan_qr_code: xpath=//*[@text='扫一扫']
 text_recognized: '车辆已识别'
 text_vehicle: xpath=//*[@text='我的 FUSION']
-vehicle_details: xpath=//*([@text='查看车辆详情']|[@text='车辆详情')
+vehicle_details: xpath=//*[@text='查看车辆详情']
 button_account: id=com.ford.oa.ap:id/account_button
