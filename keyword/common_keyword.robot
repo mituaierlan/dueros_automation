@@ -13,4 +13,5 @@ Launch_app
     ${app2}=    Open Application    ${remote_url}    alias=xiaoduAPP    platformName=${platformName}    deviceName=${deviceName2}    appPackage=${appPackage2}    appActivity=${appActivity2}      udid=${udid2}    automationName=${automationName}
 
 Close_app
-    Close Application
+    run keyword and ignore error  close all applications
+
