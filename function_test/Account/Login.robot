@@ -17,10 +17,15 @@ Login
     scan QR CODE
     Close RNR
     go back
+    catenate
+
+Auth
+    [Tags]    @tcid=1-2    @happyPath
+    choose vehicle
     enter vehicle details
     auth vehicle
     switch application    xiaoduAPP
-    WAIT UNTIL KEYWORD SUCCEEDS   Check login status
+    WAIT UNTIL KEYWORD SUCCEEDS   90s    5s    Check login status
 
 *** Keywords ***
 TS Setup
