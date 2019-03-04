@@ -20,7 +20,7 @@ fi
 adb kill-server
 adb start-server
 
-echo "Starting Appium on Linux..."
-appium &
+#echo "Starting Appium on Linux..."
+#appium &
 
 robot -V config/common_data.yaml --outputdir ${report_path} function_test/Account
