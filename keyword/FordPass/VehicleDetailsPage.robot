@@ -1,5 +1,6 @@
 *** Settings ***
 Variables   ../../source/FP_Page_source/VehicleDetailsPage.yaml
+Variables   ../../source/FP_Page_source/AuthPage.yaml
 *** Keywords ***
 Auth vehicle
     wait until page contains element     ${text_auth_vehicle}    30s
