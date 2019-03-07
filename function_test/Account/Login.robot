@@ -37,4 +37,7 @@ TS Teardown
     switch application    FPAPP
     quit application
     launch application
+    enter vehicle details
+    delete vehicle
     Logout FP
+    switch application    xiaoduAPP
