@@ -17,10 +17,10 @@ Login
     scan QR CODE
     Close RNR
     go back
-    enter vehicle details
 
 Auth
     [Tags]    @tcid=1-2    @happyPath
+    enter vehicle details
     auth vehicle
     switch application    xiaoduAPP
     WAIT UNTIL KEYWORD SUCCEEDS    90s    5s    Check login status
@@ -34,6 +34,10 @@ TS Setup
 TS Teardown
     [Documentation]    teardown for current cases
     log    reopen application
+    switch application    FPAPP
     quit application
     launch application
+    enter vehicle details
+    delete vehicle
     Logout FP
+    switch application    xiaoduAPP

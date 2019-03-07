@@ -1,2 +1,1 @@
-text_auth_vehicle: //*[@text='扫码登陆车机并激活车辆']
-text_config_auth:  //*[@text='登陆并激活车机']
+text_config_auth:  //*[@text='登录并激活车机']
