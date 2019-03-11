@@ -1,0 +1,7 @@
+text_profile_setting: xpath=//*[@text='资料设定']
+text_profile_exit: xpath=//*[@text='退出账号']
+text_confirm_exit: xpath=//*[@text='确认']
+text_cancel_exit: xpath=//*[@text='取消']
+
+
+
