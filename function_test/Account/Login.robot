@@ -9,6 +9,7 @@ Resource          ../../keyword/FordPass/AccountPage.robot
 Resource          ../../keyword/FordPass/AddVehiclePage.robot
 Resource          ../../keyword/FordPass/VehicleDetailsPage.robot
 Resource          ../../keyword/xiaodu/LoginPage.robot
+Resource          ../../keyword/xiaodu/PersonalSetting.robot
 Variables         ../../config/testdata_stage.yaml
 
 *** Test Cases ***
@@ -41,3 +42,6 @@ TS Teardown
     delete vehicle
     Logout FP
     switch application    xiaoduAPP
+    Tap by coordinator    ${position}    ${deviceName2}
+    log out duerOS
+
