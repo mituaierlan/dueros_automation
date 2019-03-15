@@ -17,6 +17,7 @@ enter vehicle details
 
 choose vehicle
     wait until page contains element    ${text_vehicle}    20s
+    sleep    2s
     click element    ${text_vehicle}
     wait until page does not contain    加载中    90s
 
