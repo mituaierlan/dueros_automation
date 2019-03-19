@@ -17,9 +17,10 @@ ${init_time}
 *** Test Cases ***
 Login
     [Tags]    @tcid=1-1    @happypath
-    ${init_time}=    get time
+    create excel workbook    performance
+    ${init_time}=    get time    epoch
     save excel   ../../${init_time}.xls
-    open excel   ../../${init_time}.xls
+#    open excel   ../../${init_time}.xls
     FOR    ${i}    IN RANGE    1    ${PerformanceCount}
     \   put string to cell  performance    0    ${i}    login
     \   ${start_time_secs}=    get time    epoch
@@ -42,15 +43,11 @@ Login
 *** Keywords ***
 TS Setup
     [Documentation]    setup for current cases
-    ${start_time}=    get time
-    ${init_time}=    set variable  ${start_time}
-    create excel workbook    performance
     switch application    FPAPP
 #    Login via FP    ${username}    ${password}
 
 TS Teardown
     [Documentation]    teardown for current cases
-    save excel   ../../${init_time}.xls
     log    reopen application
 #    switch application    FPAPP
 #    Logout FP
