@@ -1,9 +1,9 @@
 remote_url: http://localhost:4723/wd/hub
 platformName: Android
-deviceName1: 7dbbe9bb
+deviceName1: 872QADTE9NSHP
 deviceName2: 05081198538fcade
 udid1: 7dbbe9bb
-udid2: 192.168.0.105:5555
+udid2: 192.168.0.113:5555
 appPackage1: com.ford.oa.ap
 appPackage2: com.baidu.xiaoduos.launcher
 appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
@@ -13,3 +13,4 @@ appActivity2: com.baidu.xiaoduos.launcher.ui.MainActivity
 automationName: uiautomator
 noReset: true
 newCommandTimeout: 300
+appWaitDuration: 90

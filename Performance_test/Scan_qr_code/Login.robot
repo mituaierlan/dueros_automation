@@ -54,6 +54,7 @@ Login
     \    ${middle_time_secs}=    get time    epoch
     \    ${middle_time}=    get time
     \    put string to cell    performance    2    ${j}    ${middle_time}
+    \    switch application     xiaoduAPP
     \    ${status}=    run keyword and return status    Check login status
     \    run keyword if    ${status}    put string to cell    performance    4    ${j}
     \    ...    success
@@ -62,6 +63,10 @@ Login
     \    ${end_time_secs}=    get time    epoch
     \    ${end_time}=    get time
     \    put string to cell    performance    3    ${j}    ${end_time}
+    \    ${duration_time}=    evaluate    ${end_time_secs}-${start_time_secs}
+    \    log    ${duration_time}
+    \    put string to cell    performance    5    ${j}    ${duration_time}
+    \    save excel    ../../${init_time}.xls
     \    run keyword and ignore error    delete vehicle and restart app
 
 *** Keywords ***
@@ -83,12 +88,12 @@ TS Teardown
     #    Tap by coordinator    ${position}    ${deviceName2}
 
 delete vehicle and restart app
+    switch application    FPAPP
     quit application
     launch application
     enter vehicle details
     delete vehicle
     switch application    xiaoduAPP
-    Tap by coordinator    ${position}    ${deviceName2}
-    log out duerOS
     quit application
-    launch application
+    run keyword and continue on failure   launch application
+    switch application    FPAPP
