@@ -18,9 +18,9 @@ ${init_time}      ${EMPTY}
 *** Test Cases ***
 Login
     [Tags]    @tcid=1-1    @happypath
-    ${init_time}=    get time
+    ${init_time}=    get time     epoch
     save excel    ../../${init_time}.xls
-    open excel    ../../${init_time}.xls
+#    open excel    ../../${init_time}.xls
     : FOR    ${i}    IN RANGE    1    ${PerformanceCount}    2
     \    put string to cell    performance    0    ${i}    login
     \    ${start_time_secs}=    get time    epoch
@@ -67,6 +67,7 @@ Login
     \    log    ${duration_time}
     \    put string to cell    performance    5    ${j}    ${duration_time}
     \    save excel    ../../${init_time}.xls
+    \    sleep    3s
     \    run keyword and ignore error    delete vehicle and restart app
 
 *** Keywords ***

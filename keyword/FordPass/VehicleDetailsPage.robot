@@ -12,6 +12,7 @@ Auth vehicle
 delete vehicle
     sleep    5s
     Swipe by percent     1    50    1   10
+    Swipe by percent     1    50    1   10
     click element    ${text_delete_vehicle}
     click element    ${text_confirm_delete_vehicle}
     wait until page does not contain    加载中    90s
