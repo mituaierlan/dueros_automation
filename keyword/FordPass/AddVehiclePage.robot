@@ -8,5 +8,5 @@ Get started
     Catenate
 
 Close RNR
-    wait until page contains element  ${button_close}     20s
+    wait until page contains element  ${button_close}     5s
     click element    ${button_close}

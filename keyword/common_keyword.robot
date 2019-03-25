@@ -16,7 +16,7 @@ Launch_app
     \    ...    automationName=${automationName}    newCommandTimeout=${newCommandTimeout}
     \    run keyword if    ${element}=='xiaoduAPP'    Open Application    ${remote_url}    alias=xiaoduAPP    platformName=${platformName}
     \    ...    deviceName=${deviceName2}    appPackage=${appPackage2}    appActivity=${appActivity2}    udid=${udid2}    automationName=${automationName}
-    \    ...    newCommandTimeout=${newCommandTimeout}    appWaitDuration=${appWaitDuration}
+    \    ...    newCommandTimeout=${newCommandTimeout}    appWaitDuration=${appWaitDuration}    noReset=${noReset}
 
 Close_app
     run keyword and ignore error    close all applications

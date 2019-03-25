@@ -3,14 +3,15 @@ platformName: Android
 deviceName1: 872QADTE9NSHP
 deviceName2: 05081198538fcade
 udid1: 7dbbe9bb
-udid2: 192.168.0.105:5555
+udid2: 192.168.0.113:5555
 appPackage1: com.ford.oa.ap
-appPackage2: com.baidu.xiaoduos.launcher
+appPackage2: com.baidu.xiaoduos.personalcenter
 appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
-#this is for vertical
-appActivity2: com.baidu.xiaoduos.launcher.ui.MainActivity
+#this is for verticaly
+appActivity2: .activity.MainActivity
 #appActivity2: .ui.LauncherActivity
 automationName: uiautomator
 noReset: true
 newCommandTimeout: 300
+
 appWaitDuration: 90
