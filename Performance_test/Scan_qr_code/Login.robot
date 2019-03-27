@@ -10,6 +10,7 @@ Resource          ../../keyword/FordPass/AddVehiclePage.robot
 Resource          ../../keyword/FordPass/VehicleDetailsPage.robot
 Resource          ../../keyword/xiaodu/LoginPage.robot
 Resource          ../../keyword/xiaodu/PersonalSetting.robot
+Resource          ../../keyword/FordPass/AuthPage.robot
 Variables         ../../config/testdata_stage.yaml
 
 *** Variables ***
@@ -19,12 +20,18 @@ ${init_time}      ${EMPTY}
 Login
     [Tags]    @tcid=1-1    @happypath
     ${init_time}=    get time     epoch
-    save excel    ../../${init_time}.xls
 #    open excel    ../../${init_time}.xls
     : FOR    ${i}    IN RANGE    1    ${PerformanceCount}
+    \    save excel    ../../${init_time}.xls
     \    switch application    xiaoduAPP
-    \    enter qr code
+    \    quit application
+    \    launch application
+    \    sleep    3s
+    \    run keyword and ignore error   enter qr code
     \    switch application    FPAPP
+    \    quit application
+    \    launch application
+#    \    run keyword and ignore error    delete vehicle and restart app
     \    put string to cell    performance    0    ${i}    login
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
@@ -34,6 +41,7 @@ Login
     \    ...    success
     \    ...    ELSE    put string to cell    performance    3    ${i}
     \    ...    failed
+    \    run keyword if    '${status}'!='True'    continue for loop
     \    ${end_time_secs}=    get time    epoch
     \    ${end_time}=    get time
     \    put string to cell    performance    2    ${i}    ${end_time}
@@ -46,14 +54,17 @@ Login
     \    go back
     \    ${j} =     set variable  ${i}
     \    put string to cell    performance    5    ${j}    Auth
-    \    enter vehicle details
-    \    wait until page contains element     ${text_auth_vehicle}    30s
-    \    click element    ${text_auth_vehicle}
+    \    sleep    5s
+    \    enter index page
+    \    wait until page contains element    ${scan_qr_code}   60s
+    \    log    scan qr code
+    \    click element    ${scan_qr_code}
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
     \    put string to cell    performance    6    ${j}    ${start_time}
-    \    wait until page contains element     ${text_config_auth}    30s
-    \    click element    ${text_config_auth}
+    \    run keyword and return status     login and auth vehicle
+    \    run keyword if  '${status}'!='True'    run keyword and ignore error    delete vehicle and restart app
+    \    run keyword if  '${status}'!='True'    continue for loop
     \    ${middle_time_secs}=    get time    epoch
     \    ${middle_time}=    get time
     \    put string to cell    performance    7    ${j}    ${middle_time}
@@ -82,8 +93,8 @@ TS Setup
 
 TS Teardown
     [Documentation]    teardown for current cases
-    log    ${init_time}
-    save excel    ../../${init_time}.xls
+#    log    ${init_time}
+#    save excel    ../../${init_time}.xls
     log    reopen application
     #    switch application    FPAPP
     #    Logout FP
@@ -101,3 +112,5 @@ delete vehicle and restart app
     quit application
     run keyword and continue on failure   launch application
     switch application    FPAPP
+
+restart application

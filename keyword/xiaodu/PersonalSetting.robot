@@ -1,5 +1,6 @@
 *** Settings ***
 Variables  ../../source/du_Page_source/PersonalSetting.yaml
+Library           AppiumLibrary
 
 *** Keywords ***
 enter qr code
