@@ -1,10 +1,9 @@
 *** Settings ***
 Variables  ../../source/du_Page_source/PersonalSetting.yaml
-Library           AppiumLibrary
 
 *** Keywords ***
 enter qr code
-    wait until page contains element    ${text_not_login}    20s
+    wait until page contains element    ${text_not_login}    5s
     sleep     2s
     click element    ${text_user_photo}
 log out duerOS

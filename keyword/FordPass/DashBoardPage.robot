@@ -11,7 +11,7 @@ scan qr code
 
 enter vehicle details
     run keyword and ignore error   choose vehicle
-    wait until page contains element    ${vehicle_details}    20s
+    wait until page contains element    ${vehicle_details}    5s
     click element    ${vehicle_details}
     wait until page does not contain    加载中    90s
 

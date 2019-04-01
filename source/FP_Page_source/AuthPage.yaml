@@ -1,1 +1,1 @@
-text_config_auth:  //*[@text='登录并激活车机']
+text_config_auth:  xpath=//*[@text='登录并激活车机']
