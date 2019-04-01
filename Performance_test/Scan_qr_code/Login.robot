@@ -19,24 +19,23 @@ ${init_time}      ${EMPTY}
 
 *** Test Cases ***
 Login
-    [Tags]    @tcid=1-1    @happypath
-    ${init_time}=    get time     epoch
-    ${status1}=    set variable   True
-#    open excel    ../../${init_time}.xls
+    [Tags]    @tcid=1-1    @performance
+    ${init_time}=    get time    epoch
+    ${status1}=    set variable    True
+    #    open excel    ../../${init_time}.xls
     : FOR    ${i}    IN RANGE    1    ${PerformanceCount}
     \    save excel    ../../${init_time}.xls
     \    switch application    xiaoduAPP
     \    quit application
     \    launch application
+    \    run keyword and ignore error    enter qr code
     \    ${status}=    run keyword and return status    check page contain QR code
-    \    run keyword if   ${status}    run keyword and ignore error     refresh QR code
-    \    sleep    1s
-    \    run keyword and ignore error   enter qr code
+    \    run keyword if    ${status}    run keyword and ignore error    refresh QR code
     \    switch application    FPAPP
     \    quit application
     \    launch application
-    \    run keyword if  '${status1}'!='True'    run keyword and ignore error  delete vehicle and restart app
-#    \    run keyword and ignore error    delete vehicle and restart app
+    \    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
+    \    #    run keyword and ignore error    delete vehicle and restart app
     \    put string to cell    performance    0    ${i}    login
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
@@ -55,24 +54,31 @@ Login
     \    log    ${duration_time}
     \    put string to cell    performance    4    ${i}    ${duration_time}
     \    save excel    ../../${init_time}.xls
-    \    run keyword and ignore error     Close RNR
+    \    run keyword and ignore error    Close RNR
     \    go back
-    \    ${j} =     set variable  ${i}
+    \    ${j} =    set variable    ${i}
     \    put string to cell    performance    5    ${j}    Auth
     \    sleep    5s
     \    enter index page
-    \    run keyword and ignore error     wait until page contains element    ${scan_qr_code}   5s
-    \    run keyword and ignore error     click element    ${scan_qr_code}
+    \    run keyword and ignore error    wait until page contains element    ${scan_qr_code}    5s
+    \    run keyword and ignore error    click element    ${scan_qr_code}
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
     \    put string to cell    performance    6    ${j}    ${start_time}
-    \    ${status1}=    run keyword and return status     login and auth vehicle
-    \    run keyword if  '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
-    \    run keyword if  '${status1}'!='True'    continue for loop
+    \    ${status1}=    run keyword and return status    login and auth vehicle
+#    \    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
+    \    run keyword if    '${status1}'!='True'    continue for loop
+    \    ${status1}=    run keyword and return status   check page contain login dueros
+    \    run keyword if    '${status1}'=='True'    run keyword and ignore error    put string to cell    performance    11    ${j}    need to login dueros
+    \    run keyword if    '${status1}'=='True'    run keyword and ignore error    delete vehicle and restart app
+    \    run keyword if    '${status1}'=='True'    continue for loop
+    \    ${status1}=    run keyword and return status    login and auth vehicle
+#    \    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
+    \    run keyword if    '${status1}'!='True'    continue for loop
     \    ${middle_time_secs}=    get time    epoch
     \    ${middle_time}=    get time
     \    put string to cell    performance    7    ${j}    ${middle_time}
-    \    switch application     xiaoduAPP
+    \    switch application    xiaoduAPP
     \    ${status1}=    run keyword and return status    Check login status
     \    run keyword if    ${status1}    put string to cell    performance    9    ${j}
     \    ...    success
@@ -81,7 +87,7 @@ Login
     \    ${end_time_secs}=    get time    epoch
     \    ${end_time}=    get time
     \    put string to cell    performance    8    ${j}    ${end_time}
-    \    ${duration_time}=    evaluate    ${end_time_secs}-${start_time_secs}
+    \    ${duration_time}=    evaluate    ${end_time_secs}-${start_time_secs}-1
     \    log    ${duration_time}
     \    put string to cell    performance    10    ${j}    ${duration_time}
     \    save excel    ../../${init_time}.xls
@@ -97,8 +103,8 @@ TS Setup
 
 TS Teardown
     [Documentation]    teardown for current cases
-#    log    ${init_time}
-#    save excel    ../../${init_time}.xls
+    #    log    ${init_time}
+    #    save excel    ../../${init_time}.xls
     log    reopen application
     #    switch application    FPAPP
     #    Logout FP
@@ -114,7 +120,7 @@ delete vehicle and restart app
     sleep    3s
     switch application    xiaoduAPP
     quit application
-    run keyword and continue on failure   launch application
+    run keyword and continue on failure    launch application
     switch application    FPAPP
 
-restart application
+
