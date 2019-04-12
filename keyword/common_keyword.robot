@@ -13,9 +13,9 @@ Launch_app
     : FOR    ${element}    IN    @{args}
     \    run keyword if    ${element}=='FPAPP'    Open Application    ${remote_url}    alias=FPAPP    platformName=${platformName}
     \    ...    deviceName=${deviceName1}    appPackage=${appPackage1}    appActivity=${appActivity1}    noReset=${noReset}    udid=${udid1}    appWaitDuration=${appWaitDuration}
-    \    ...    automationName=${automationName}    newCommandTimeout=${newCommandTimeout}
+    \    ...    newCommandTimeout=${newCommandTimeout}
     \    run keyword if    ${element}=='xiaoduAPP'    Open Application    ${remote_url}    alias=xiaoduAPP    platformName=${platformName}
-    \    ...    deviceName=${deviceName2}    appPackage=${appPackage2}    appActivity=${appActivity2}    udid=${udid2}    automationName=${automationName}
+    \    ...    deviceName=${deviceName2}    appPackage=${appPackage2}    appActivity=${appActivity2}    udid=${udid2} 
     \    ...    newCommandTimeout=${newCommandTimeout}    appWaitDuration=${appWaitDuration}    noReset=${noReset}
 
 Close_app

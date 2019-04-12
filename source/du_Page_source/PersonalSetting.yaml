@@ -3,7 +3,7 @@ text_profile_exit: xpath=//*[@text='退出账号']
 text_confirm_exit: xpath=//*[@text='确认']
 text_cancel_exit: xpath=//*[@text='取消']
 text_not_login: xpath=//*[@text='未登录']
-text_user_photo: id=com.baidu.xiaoduos.personalcenter:id/civ_userPhoto
+text_user_photo: xpath=//*[@resource-id='com.baidu.xiaoduos.personalcenter:id/civ_userPhoto']
 
 
 

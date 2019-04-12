@@ -65,9 +65,7 @@ Login
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
     \    put string to cell    performance    6    ${j}    ${start_time}
-    \    ${status1}=    run keyword and return status    login and auth vehicle
-#    \    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
-    \    run keyword if    '${status1}'!='True'    continue for loop
+
     \    ${status1}=    run keyword and return status   check page contain login dueros
     \    run keyword if    '${status1}'=='True'    run keyword and ignore error    put string to cell    performance    11    ${j}    need to login dueros
     \    run keyword if    '${status1}'=='True'    run keyword and ignore error    delete vehicle and restart app
@@ -121,6 +119,7 @@ delete vehicle and restart app
     switch application    xiaoduAPP
     quit application
     run keyword and continue on failure    launch application
+    run keyword and ignore error   log out duerOS
     switch application    FPAPP
 
 

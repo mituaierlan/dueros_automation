@@ -10,7 +10,7 @@ appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
 #this is for verticaly
 appActivity2: .activity.MainActivity
 #appActivity2: .ui.LauncherActivity
-automationName: uiautomator
+#automationName: uiautomator
 noReset: true
 newCommandTimeout: 300
 
