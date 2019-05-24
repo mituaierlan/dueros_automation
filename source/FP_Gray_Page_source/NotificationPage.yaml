@@ -1,0 +1,2 @@
+button_wifi: xpath=//android.view.ViewGroup[@content-desc="WLAN,开启。,FordSponsoredGuest,按钮"]/android.widget.ImageView
+button_bluetooth: xpath=//android.view.ViewGroup[@content-desc="蓝牙,开启。,按钮"]/android.widget.ImageView

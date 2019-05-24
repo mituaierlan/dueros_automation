@@ -1,0 +1,3 @@
+text_config_auth:  xpath=//*[@text='登录并激活车机']
+text_login_dueros: xpath=//*[@text='联合登录']
+#text_config_auth:  xpath=//*[@text='登录车机']

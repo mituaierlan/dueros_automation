@@ -1,10 +1,11 @@
-remote_url: http://localhost:4723/wd/hub
+remote_url: 192.168.0.128:4723/wd/hub
 platformName: Android
 deviceName1: 872QADTE9NSHP
 deviceName2: 05081198538fcade
 udid1: 7dbbe9bb
-udid2: 192.168.0.113:5555
-appPackage1: com.ford.oa.ap
+udid2: 0d0c180e82964887
+#appPackage1: com.ford.oa.ap
+appPackage1: com.ford.fordpasscn
 appPackage2: com.baidu.xiaoduos.personalcenter
 appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
 #this is for verticaly
@@ -13,5 +14,4 @@ appActivity2: .activity.MainActivity
 #automationName: uiautomator
 noReset: true
 newCommandTimeout: 300
-
 appWaitDuration: 90

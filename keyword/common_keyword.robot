@@ -4,7 +4,6 @@ Variables         ../config/common.yaml
 Library           AppiumLibrary
 Library           OperatingSystem
 Library           ExcelLibrary
-
 *** Keywords ***
 Launch_app
     [Arguments]    @{args}    &{kwargs}
@@ -25,3 +24,9 @@ Tap by coordinator
     [Arguments]    ${position}    ${deviceName}
     log    ${deviceName} ${position}
     run    adb -s ${deviceName} shell input tap ${position}
+
+
+modify CAQ via adb
+    [Arguments]    ${deviceName}    ${caq_value}
+    ${result}=    run    adb -s ${deviceName} shell am broadcast -a com.xiaoduos.action.ACTION_DATA_AVAILABLE --ei EXTRA_DATA ${caq_value}
+    log    ${result}

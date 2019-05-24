@@ -1,0 +1,11 @@
+scan_qr_code: xpath=//*[@text='扫一扫']
+button_action_more: id=com.ford.fordpasscn:id/action_more
+text_recognized: '车辆已识别'
+text_vehicle: xpath=//*[contains(@text,'我的 FUSION')]
+vehicle_details: xpath=//*[@text='查看车辆详情']
+button_account: id=com.ford.oa.ap:id/account_button
+text_index_page: xpath=//*[@text='首页']
+button_person_info: accessibility id=转到上一层级
+text_config_auth:  xpath=//*[@text='登录并激活车机']
+button_auth_vehicle: xpath=//*[@text='激活车辆']
+

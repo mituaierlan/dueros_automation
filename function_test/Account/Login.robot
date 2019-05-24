@@ -10,11 +10,24 @@ Resource          ../../keyword/FordPass/AddVehiclePage.robot
 Resource          ../../keyword/FordPass/VehicleDetailsPage.robot
 Resource          ../../keyword/xiaodu/LoginPage.robot
 Resource          ../../keyword/xiaodu/PersonalSetting.robot
+Resource          ../../keyword/xiaodu/QRCodePage.robot
+Resource          ../../keyword/xiaodu/RegisterFordPassPage.robot
 Variables         ../../config/testdata_stage.yaml
-
 *** Test Cases ***
-Login
-    [Tags]    @tcid=1-1    @happypath
+Download and install FordPass and register fordpass account
+    [Tags]    @tcid=001.002.001    @regression
+    [Setup]   switch application   xiaoduAPP
+    [Teardown]    switch application    FPAPP
+    enter qr code
+    check QRcode page contain specified text
+    Enter no fordpass page
+    ${init_time}=    get time    epoch
+    capture page screenshot    001_002_001_${init_time}.png
+    check Register page contain specified text
+
+Add Vehicle
+    [Tags]    @tcid=001.002.002    @Regression
+    [Setup]
     scan QR CODE
     Close RNR
     go back
@@ -36,12 +49,12 @@ TS Teardown
     [Documentation]    teardown for current cases
     log    reopen application
     switch application    FPAPP
-    quit application
-    launch application
-    enter vehicle details
-    delete vehicle
+#    quit application
+#    launch application
+#    enter vehicle details
+#    delete vehicle
     Logout FP
     switch application    xiaoduAPP
-    Tap by coordinator    ${position}    ${deviceName2}
-    log out duerOS
+#    Tap by coordinator    ${position}    ${deviceName2}
+#    log out duerOS
 

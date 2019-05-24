@@ -1,0 +1,2 @@
+text_exit: xpath=//*[@text='退出']
+button_my_vehicle: xpath=//*[@text='我的车辆']

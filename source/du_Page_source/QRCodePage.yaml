@@ -1,2 +1,8 @@
 QR_code_status: xpath=//*[@text='点击刷新']
+Text_login_to_unlock_more_function: 登录账号解锁更多功能
+Text_vin: 车辆识别代号(VIN)：
+Text_CAF_Phone: 长安福特客服电话：
+Text_Phone_Number: 400-887-7766
+Text_Scan_to_login: 福特派APP扫描登录
+Text_no_fordPass: 没有福特派？
 
