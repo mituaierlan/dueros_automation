@@ -15,8 +15,8 @@ auth vehicle
     wait until page contains element    ${button_auth_vehicle}   60s
     log    auth vehicle
     click element    ${button_auth_vehicle}
-    run keyword and continue on failure      wait until page contains    ${text_config_auth}    60s
-    click element    ${text_config_auth}
+    run keyword and continue on failure      wait until page contains element    ${text_config_auth}    60s
+
 
 enter vehicle details
     run keyword and ignore error   choose vehicle

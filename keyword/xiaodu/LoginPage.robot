@@ -5,5 +5,5 @@ Variables  ../../source/du_Page_source/LoginPage.yaml
 Check login status
     [Documentation]  check the status of the login
 
-    run keyword and continue on failure    wait until page contains    ${text_login_success}    60s
+    run keyword and continue on failure    wait until page contains    ${text_login_success}    30s
     go back

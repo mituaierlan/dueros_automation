@@ -12,6 +12,7 @@ Resource          ../../keyword/FordPass_Gray/MyVehiclePage.robot
 Resource          ../../keyword/xiaodu/LoginPage.robot
 Resource          ../../keyword/xiaodu/PersonalSetting.robot
 Resource          ../../keyword/FordPass_Gray/AuthPage.robot
+Resource          ../../keyword/xiaodu/AuthPage.robot
 Resource          ../../keyword/xiaodu/QRCodePage.robot
 Variables         ../../config/testdata_stage.yaml
 
@@ -62,7 +63,6 @@ Login
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
     \    put string to cell    performance    6    ${j}    ${start_time}
-
     \    ${status1}=    run keyword and return status   check page contain login dueros
     \    run keyword if    '${status1}'=='True'    run keyword and ignore error    put string to cell    performance    11    ${j}    need to login dueros
     \    run keyword if    '${status1}'=='True'    run keyword and ignore error    delete vehicle and restart app
@@ -75,10 +75,13 @@ Login
     \    put string to cell    performance    7    ${j}    ${middle_time}
     \    switch application    xiaoduAPP
     \    ${status1}=    run keyword and return status    Check login status
+    \    ${status2}=    run keyword and return status    confirm to auth vehicle
+    \    ${status1}=    evaluate  ${status1} and ${status2}
     \    run keyword if    ${status1}    put string to cell    performance    9    ${j}
     \    ...    success
     \    ...    ELSE    put string to cell    performance    9    ${j}
     \    ...    failed
+    \    run keyword if    '${status1}'!='True'    continue for loop
     \    ${end_time_secs}=    get time    epoch
     \    ${end_time}=    get time
     \    put string to cell    performance    8    ${j}    ${end_time}
@@ -87,7 +90,14 @@ Login
     \    put string to cell    performance    10    ${j}    ${duration_time}
     \    save excel    ../../${init_time}.xls
     \    sleep    3s
+    \
     \    run keyword and ignore error    delete vehicle and restart app
+    \    switch application    xiaoduAPP
+    \    ${status_login}=    run keyword and return status   check the status of login
+    \    run keyword if    '${status_login}'=='True'    run keyword and ignore error    put string to cell    performance    12     ${j}
+    \    ...    success to logout
+    \    ...    ELSE    put string to cell    performance    12     ${j}
+    \    ...    failed to logout
 
 *** Keywords ***
 TS Setup

@@ -1,3 +1,4 @@
 button_edit: xpath=//*[@text='编辑']
+button_my_vehicle: xpath=//*[@text='我的车辆']
 text_delete_vehicle: //*[@text='移除车辆']
 text_confirm_delete_vehicle: //*[@text='移除']

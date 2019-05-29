@@ -6,7 +6,7 @@ Library           OperatingSystem
 Library           ExcelLibrary
 *** Keywords ***
 Launch_app
-    [Arguments]    @{args}    &{kwargs}
+    [Arguments]    @{args}
     [Documentation]    Launch the app of duerOS and FP
     log    app
     : FOR    ${element}    IN    @{args}

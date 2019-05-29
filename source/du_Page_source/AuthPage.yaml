@@ -1,4 +1,4 @@
-button_auth_vehicle:  xpath=//*[@text='授权']
+button_auth_vehicle_xiaodu:  xpath=//*[@text='授权']
 text_confirm_auth: xpath=//*[@text='请确认车辆激活请求']
 button_cancel_auth:   xpath=//*[@text='取消']
 #text_config_auth:  xpath=//*[@text='登录车机']

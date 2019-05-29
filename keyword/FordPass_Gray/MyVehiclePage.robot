@@ -4,6 +4,9 @@ Variables   ../../source/FP_Page_source/AccountPage.yaml
 *** Keywords ***
 delete vehicle
     wait until page does not contain    加载中    90s
+    click element    ${button_my_vehicle}
+    wait until page does not contain    加载中    90s
+    run keyword if
     click element    ${button_edit}
     wait until page does not contain    加载中    90s
     click element    ${text_delete_vehicle}
