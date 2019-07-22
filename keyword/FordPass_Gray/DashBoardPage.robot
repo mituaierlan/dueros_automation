@@ -6,7 +6,7 @@ scan qr code
     enter index page
     click element   ${button_action_more}
     wait until page contains element    ${scan_qr_code}   60s
-    log    scan qr code
+
     click element    ${scan_qr_code}
     run keyword and continue on failure      wait until page contains    ${text_recognized}    60s
 

@@ -1,0 +1,6 @@
+text_SysConf: id=com.baidu.xiaoduos.setting:id/system_setting_rl
+text_WFHS: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.support.v4.view.ViewPager/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[6]
+text_wfhs_switch: id=com.baidu.xiaoduos.setting:id/rl_title_1
+button_wfhs_switch: id=com.baidu.xiaoduos.setting:id/switch_hotspot
+text_device_manage: id=com.baidu.xiaoduos.setting:id/rl_hotspot_device
+wfhs_page_back: id=com.baidu.xiaoduos.setting:id/com_ivleft

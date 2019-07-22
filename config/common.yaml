@@ -1,17 +1,59 @@
-remote_url: 192.168.0.128:4723/wd/hub
-platformName: Android
+#remote_url: http://localhost:4723/wd/hub
+#platformName: Android
+#deviceName1: 872QADTE9NSHP
+#deviceName2: 05081198538fcade
+#udid1: 631802c
+#udid2: 0d0c180e82964887
+##appPackage1: com.ford.oa.ap
+#appPackage1: com.ford.fordpasscn
+#appPackage2: com.baidu.xiaoduos.personalcenter
+#appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
+##this is for verticaly
+#appActivity2: .activity.MainActivity
+##appActivity2: .ui.LauncherActivity
+##automationName: uiautomator
+#noReset: true
+#newCommandTimeout: 300
+#appWaitDuration: 90
+#remote_url1: localhost:4723/wd/hub
+remote_url1: http://localhost:4723/wd/hub
+remote_url2: http://localhost:4723/wd/hub
+remote_url3: http://localhost:4723/wd/hub
+remote_url4: http://localhost:4723/wd/hub
+
+platformName1: Android
+platformName2: Android
+platformName3: Android
+platformName4: Android
 deviceName1: 872QADTE9NSHP
 deviceName2: 05081198538fcade
-udid1: 7dbbe9bb
-udid2: 0d0c180e82964887
+deviceName3: 05081198538fcade
+deviceName4: 05081198538fcade
+#deviceName2: 0d121198538fcade
+udid1: 631802c
+#udid1: 7dbbe9bb
+udid2: 11114998538fcade
+#udid3: 631802c
+udid3: 79BQADSDAJGSB
+udid4: 11114998538fcade
+
+#udid2: 0d0c180e82964887
 #appPackage1: com.ford.oa.ap
 appPackage1: com.ford.fordpasscn
 appPackage2: com.baidu.xiaoduos.personalcenter
+appPackage3: com.songheng.eastnews
+appPackage4: com.baidu.car.radio
+
 appActivity1: com.fordmps.mobileapp.shared.login.LauncherActivity
 #this is for verticaly
 appActivity2: .activity.MainActivity
+appActivity3: com.oa.eastfirst.activity.WelcomeActivity
+appActivity4: .MainActivity
+
 #appActivity2: .ui.LauncherActivity
-#automationName: uiautomator
+automationName:
 noReset: true
 newCommandTimeout: 300
 appWaitDuration: 90
+bundleId: com.ford.fordownerapp.torqueap
+platformVersion: 12.1

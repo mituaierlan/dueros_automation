@@ -1,0 +1,26 @@
+icon_car: id=com.baidu.xiaoduos.launcher:id/iv_car_model
+#text_baidumap: '百度地图'
+#text_baidumap: id=百度地图
+text_baidumap: xpath=//android.widget.TextView[@content-desc="百度地图"]
+text_audio_app: id=com.baidu.xiaoduos.launcher:id/anim_view
+text_songname: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.TextView[1]
+
+text_duration: id=com.baidu.car.radio:id/tv_duration
+#text_duration: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.TextView[4]
+text_recommend: '每日推荐'
+text_fashion: '流行指数榜'
+
+text_nextmusic: id=com.baidu.car.radio:id/iv_next
+text_premusic: id=com.baidu.car.radio:id/iv_pre
+text_music: id=com.baidu.car.radio:id/iv_music
+text_playmusic: id=com.baidu.car.radio:id/iv_play_or_pause
+text_zerozero: '00:00'
+text_back: id=com.baidu.car.radio:id/iv_back
+text_audio: id=com.baidu.car.radio:id/tv_radio
+text_search: id=com.baidu.car.radio:id/iv_search
+text_search_banner: id=com.baidu.car.radio:id/et_keyword
+#text_search_banner: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText
+
+text_song1: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[1]
+text_search_close: id=com.baidu.car.radio:id/iv_close
+text_mylike: '我喜欢的'

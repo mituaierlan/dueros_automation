@@ -1,4 +1,5 @@
-scan_qr_code: xpath=//*[@text='扫一扫']
+scan_qr_code: xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView
+#xpath=//*[@text='扫一扫']
 button_action_more: id=com.ford.fordpasscn:id/action_more
 text_recognized: '车辆已识别'
 text_vehicle: xpath=//*[contains(@text,'我的 FUSION')]
@@ -8,4 +9,7 @@ text_index_page: xpath=//*[@text='首页']
 button_person_info: xpath=//*[@content-desc='转到上一层级']
 text_config_auth:  xpath=//*[@text='登录并激活车机']
 button_auth_vehicle: xpath=//*[@text='激活车辆']
+
+
+
 

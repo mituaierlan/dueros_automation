@@ -7,8 +7,7 @@ Resource          ../../keyword/FordPass_Gray/LoginPage.robot
 Resource          ../../keyword/FordPass_Gray/DashBoardPage.robot
 Resource          ../../keyword/FordPass_Gray/AccountPage.robot
 Resource          ../../keyword/FordPass_Gray/AddVehiclePage.robot
-#Resource          ../../keyword/FordPass_Gray/VehicleDetailsPage.robot
-Resource          ../../keyword/FordPass_Gray/MyVehiclePage.robot
+Resource          ../../keyword/FordPass_Gray/MyVehiclePage.robot    #Resource    ../../keyword/FordPass_Gray/VehicleDetailsPage.robot
 Resource          ../../keyword/xiaodu/LoginPage.robot
 Resource          ../../keyword/xiaodu/PersonalSetting.robot
 Resource          ../../keyword/FordPass_Gray/AuthPage.robot
@@ -63,12 +62,13 @@ Login
     \    ${start_time_secs}=    get time    epoch
     \    ${start_time}=    get time
     \    put string to cell    performance    6    ${j}    ${start_time}
-    \    ${status1}=    run keyword and return status   check page contain login dueros
-    \    run keyword if    '${status1}'=='True'    run keyword and ignore error    put string to cell    performance    11    ${j}    need to login dueros
+    \    ${status1}=    run keyword and return status    check page contain login dueros
+    \    run keyword if    '${status1}'=='True'    run keyword and ignore error    put string to cell    performance    11
+    \    ...    ${j}    need to login dueros
     \    run keyword if    '${status1}'=='True'    run keyword and ignore error    delete vehicle and restart app
     \    run keyword if    '${status1}'=='True'    continue for loop
     \    ${status1}=    run keyword and return status    login and auth vehicle
-#    \    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
+    \    #    run keyword if    '${status1}'!='True'    run keyword and ignore error    delete vehicle and restart app
     \    run keyword if    '${status1}'!='True'    continue for loop
     \    ${middle_time_secs}=    get time    epoch
     \    ${middle_time}=    get time
@@ -76,7 +76,7 @@ Login
     \    switch application    xiaoduAPP
     \    ${status1}=    run keyword and return status    Check login status
     \    ${status2}=    run keyword and return status    confirm to auth vehicle
-    \    ${status1}=    evaluate  ${status1} and ${status2}
+    \    ${status1}=    evaluate    ${status1} and ${status2}
     \    run keyword if    ${status1}    put string to cell    performance    9    ${j}
     \    ...    success
     \    ...    ELSE    put string to cell    performance    9    ${j}
@@ -90,13 +90,13 @@ Login
     \    put string to cell    performance    10    ${j}    ${duration_time}
     \    save excel    ../../${init_time}.xls
     \    sleep    3s
-    \
+    ${EMPTY}
     \    run keyword and ignore error    delete vehicle and restart app
     \    switch application    xiaoduAPP
-    \    ${status_login}=    run keyword and return status   check the status of login
-    \    run keyword if    '${status_login}'=='True'    run keyword and ignore error    put string to cell    performance    12     ${j}
-    \    ...    success to logout
-    \    ...    ELSE    put string to cell    performance    12     ${j}
+    \    ${status_login}=    run keyword and return status    check the status of login
+    \    run keyword if    '${status_login}'=='True'    run keyword and ignore error    put string to cell    performance    12
+    \    ...    ${j}    success to logout
+    \    ...    ELSE    put string to cell    performance    12    ${j}
     \    ...    failed to logout
 
 *** Keywords ***
@@ -126,7 +126,5 @@ delete vehicle and restart app
     switch application    xiaoduAPP
     quit application
     run keyword and continue on failure    launch application
-    run keyword and ignore error   log out duerOS
+    run keyword and ignore error    log out duerOS
     switch application    FPAPP
-
-

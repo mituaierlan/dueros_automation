@@ -1,6 +1,38 @@
-scan_qr_code: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.support.v4.view.ViewPager/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[12]
-text_recognized: '车辆已识别'
+#scan_qr_code: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.support.v4.view.ViewPager/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[12]
+scan_qr_code: xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView
+text_recognized_ok: '车辆已识别'
+text_recognized: '登录车机'
+login_in_code: xpath=//*[@text='登录车机']
+#text_extend: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v7.widget.LinearLayoutCompat/android.widget.TextView
+text_extend: id= com.ford.oa.ap:id/action_more
 text_vehicle: xpath=//*[contains(@text,'我的 FUSION')]
 vehicle_details: xpath=//*[@text='查看车辆详情']
 button_account: id=com.ford.oa.ap:id/account_button
-text_index_page: xpath=//*[@text='主页']
+text_index_page: xpath=//*[@text='首页']
+text_vehicle_status_page: xpath=//*[@text='车辆']
+
+text_myaccount:  id = 转到上一层级
+text_myaccountinfo: 我的账户
+text_mescenter: 信息中心
+text_mes1: xpath = /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[1]
+text_toget: id = com.ford.oa.ap:id/message_details_date_tv
+text_cancel: id = com.ford.oa.ap:id/close_iv
+text_mescenter_back: xpath = /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageButton
+
+# Command Control
+text_start: id = com.ford.fordpasscn:id/remote_control_engine_control_button_tv
+text_unlock: id = com.ford.fordpasscn:id/remote_control_unlock_iv
+text_lock: id = com.ford.fordpasscn:id/remote_control_lock_iv
+
+text_banner_close: id = com.ford.fordpasscn:id/remind_banner_close_iv
+text_banner: id = com.ford.fordpasscn:id/remind_banner_tv
+text_startagain: 请点击并长按进行重试
+text_startok: 车辆已启动
+text_shutdown: 车辆已熄火
+text_unlockok: 车门已解锁
+text_lockok: 车门已上锁
+text_alert: 警示：车辆未能启动
+text_addtime: 分钟内关闭
+text_syserror: 抱歉，系统异常。
+text_net_error: 抱歉，请检查您的网络连接并重试。
+

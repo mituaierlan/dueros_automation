@@ -1,0 +1,38 @@
+text_takeout: xpath=//*[@text='外卖']
+text_take: '外卖'
+icon_car: id=com.baidu.xiaoduos.launcher:id/iv_car_model
+#text_baidumap: '百度地图'
+#text_baidumap: id=百度地图
+text_baidumap: xpath=//android.widget.TextView[@content-desc="百度地图"]
+
+text_order_ok: xpath=//*[@text='确认下单']
+text_choose_specification: '选规格'
+shopping_car: id=com.baidu.iov.dueros.waimai:id/shopping_cart
+text_title: id=com.baidu.iov.dueros.waimai:id/tv_title   #鲜花预订 蛋糕预订
+shop_title: id=com.baidu.iov.dueros.waimai:id/tv_shop_title   #具体的店名称
+add_to_shopcar: id=com.baidu.iov.dueros.waimai:id/btn_add_to_cart_specification
+add_to_shopcar_dismiss: id=com.baidu.iov.dueros.waimai:id/iv_dismiss
+add_to_shopcarincrease: id=com.baidu.iov.dueros.waimai:id/increase
+
+randomfoodnum: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView[2]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.TextView
+randomfood: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.support.v7.widget.LinearLayoutCompat
+randomfood_text: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.support.v7.widget.LinearLayoutCompat/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView[1]
+randomflower_text: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.support.v7.widget.LinearLayoutCompat/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView[1]
+randomcake_text: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.support.v7.widget.LinearLayoutCompat/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView[1]
+randomelement: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView[2]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.RelativeLayout
+elementspecification: xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView[2]/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.TextView
+
+take_out_back: id=com.baidu.iov.dueros.waimai:id/iv_back
+interface_back: id=com.baidu.iov.dueros.waimai:id/btn_back
+shop_back: id=com.baidu.iov.dueros.waimai:id/iv_finish
+order_back: id=com.baidu.iov.dueros.waimai:id/back_action
+pay_back: id=com.baidu.iov.dueros.waimai:id/back
+
+ok_to_pay: id=com.baidu.iov.dueros.waimai:id/to_pay
+pay_qrcode: id=com.baidu.iov.dueros.waimai:id/qr_code
+
+cake_order: id=com.baidu.iov.dueros.waimai:id/iv_cake
+flower_order: id=com.baidu.iov.dueros.waimai:id/iv_flower
+
+my_order: id=com.baidu.iov.dueros.waimai:id/iv_right
+popup:  id=com.baidu.iov.dueros.waimai:id/dialog_negative
